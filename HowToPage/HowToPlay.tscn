@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmwiltamf3lu3"]
+
+[ext_resource type="Script" path="res://HowToPage/HowToPlaym.gd" id="1_b6px4"]
+[ext_resource type="Texture2D" uid="uid://tvyh2bqjc0hr" path="res://Assets/Screenshot 2024-04-27 000945.png" id="1_m2i3g"]
+[ext_resource type="Texture2D" uid="uid://cb2mnmr1ewpdv" path="res://Assets/TILE.jpg" id="2_6xhaf"]
+[ext_resource type="FontFile" uid="uid://g8npey44c66j" path="res://pixeloid-font/PixeloidMono-d94EV.ttf" id="3_ii3vf"]
+[ext_resource type="Texture2D" uid="uid://ckhwv8fxnvogu" path="res://Assets/pixil-frame-0 (5).png" id="5_ly248"]
+[ext_resource type="Texture2D" uid="uid://db2x0jgwdbpu7" path="res://Assets/GamerANGRy.png" id="6_2f3vv"]
+
+[node name="Node2D" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_b6px4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(545.126, 459.501)
+scale = Vector2(1.51381, 1.5282)
+texture = ExtResource("1_m2i3g")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(516.251, 267.001)
+scale = Vector2(0.461423, 0.296681)
+texture = ExtResource("2_6xhaf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1164.25, 303.001)
+scale = Vector2(0.461423, 0.296681)
+texture = ExtResource("2_6xhaf")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(993.251, 859.001)
+scale = Vector2(0.461423, 0.296681)
+texture = ExtResource("2_6xhaf")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(205.689, 828.751)
+scale = Vector2(0.571393, 0.133818)
+texture = ExtResource("2_6xhaf")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(375.251, 255.001)
+scale = Vector2(0.148297, 0.0417531)
+texture = ExtResource("2_6xhaf")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(1029.25, 264.001)
+scale = Vector2(0.102768, 0.0438278)
+texture = ExtResource("2_6xhaf")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(947.251, 759.001)
+scale = Vector2(0.0413639, 0.173366)
+texture = ExtResource("2_6xhaf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 418.251
+offset_top = 218.001
+offset_right = 638.251
+offset_bottom = 334.001
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_ii3vf")
+theme_override_font_sizes/normal_font_size = 18
+text = "Click on the correct pixel cooredinates and render a image for your GAMER"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 110.251
+offset_top = 804.001
+offset_right = 323.251
+offset_bottom = 864.001
+theme_override_fonts/normal_font = ExtResource("3_ii3vf")
+theme_override_font_sizes/normal_font_size = 18
+text = "Its literally Math..."
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 1065.25
+offset_top = 244.001
+offset_right = 1270.25
+offset_bottom = 367.001
+theme_override_fonts/normal_font = ExtResource("3_ii3vf")
+theme_override_font_sizes/normal_font_size = 18
+text = "Live Cam view of your Gamer, shows you how frustrated he is."
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+offset_left = 897.251
+offset_top = 814.001
+offset_right = 1132.25
+offset_bottom = 925.001
+theme_override_fonts/normal_font = ExtResource("3_ii3vf")
+theme_override_font_sizes/normal_font_size = 18
+text = "Click the fan to decrease the HEAT meter, you don't want to overheat"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 403.0
+offset_top = 420.0
+offset_right = 691.0
+offset_bottom = 495.0
+theme_override_colors/font_color = Color(0.996078, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ii3vf")
+theme_override_font_sizes/font_size = 21
+text = "I Understood my duty"
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(1169, 147)
+scale = Vector2(0.207019, 0.211509)
+texture = ExtResource("5_ly248")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(1170, 455)
+scale = Vector2(0.201923, 0.202882)
+texture = ExtResource("6_2f3vv")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1085.0
+offset_top = 33.0
+offset_right = 1292.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("3_ii3vf")
+text = "Happy, you are 
+doing good"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1079.0
+offset_top = 533.0
+offset_right = 1272.0
+offset_bottom = 599.0
+theme_override_fonts/font = ExtResource("3_ii3vf")
+text = "Frustrated
+You better step up 
+your game"

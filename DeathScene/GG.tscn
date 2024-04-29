@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5x0ko4kadwpv"]
+
+[ext_resource type="Script" path="res://DeathScene/GG.gd" id="1_mwm1o"]
+[ext_resource type="FontFile" uid="uid://g8npey44c66j" path="res://pixeloid-font/PixeloidMono-d94EV.ttf" id="2_18k35"]
+[ext_resource type="Texture2D" uid="uid://4wgt03supld2" path="res://Assets/DALL·E 2024-04-27 13.49.33 - A pixel art image depicting a very powerful and cool-looking graphics card in retro 8-bit style, primarily in red. The graphics card should look detai.jpg" id="3_bgfxy"]
+[ext_resource type="Texture2D" uid="uid://b5wyd611wckrj" path="res://Assets/DALL·E 2024-04-27 13.51.21 - A pixel art image depicting a broken and poorly maintained old GPU in a retro style. The GPU should appear old and neglected, with visible signs of we.jpg" id="4_afrk8"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_mwm1o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(655, 458)
+scale = Vector2(0.703125, 0.697266)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 450.0
+offset_top = 126.0
+offset_right = 858.0
+offset_bottom = 219.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_18k35")
+theme_override_font_sizes/font_size = 76
+text = "YOU LOST"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 286.0
+offset_top = 238.0
+offset_right = 1112.0
+offset_bottom = 318.0
+theme_override_fonts/font = ExtResource("2_18k35")
+theme_override_font_sizes/font_size = 18
+text = "YOU ARE REPLACED WITH THE NEWEST AND STRONGEST 9090 GRX GPU"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(905, 458)
+scale = Vector2(0.305908, 0.236084)
+texture = ExtResource("3_bgfxy")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(406, 459)
+scale = Vector2(0.302856, 0.241333)
+texture = ExtResource("4_afrk8")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 600.0
+offset_right = 1262.0
+offset_bottom = 746.0
+theme_override_fonts/font = ExtResource("2_18k35")
+theme_override_font_sizes/font_size = 41
+text = "You VS the GPU she told you not to worry about"
+metadata/_edit_use_anchors_ = true

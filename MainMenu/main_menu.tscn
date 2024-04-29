@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://cng6hbjdcosjh"]
+
+[ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_2ctub"]
+[ext_resource type="FontFile" uid="uid://g8npey44c66j" path="res://pixeloid-font/PixeloidMono-d94EV.ttf" id="2_rbsnd"]
+[ext_resource type="Texture2D" uid="uid://bc3dvxyhpswgv" path="res://Assets/DALL·E 2024-04-26 21.45.50 - Create a retro 8-bit pixel art image of a graphics card. The card should be depicted in a straight, non-tilted orientation. It should feature a primar.jpg" id="2_sgv0a"]
+
+[node name="Main_Menu" type="Control"]
+process_mode = 3
+process_priority = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ctub")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sgv0a")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 1282.0
+offset_bottom = 1020.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 85
+
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.950415, 0.954659, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_rbsnd")
+theme_override_font_sizes/font_size = 60
+text = "GPU Simulator"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -775
+alignment = 1
+
+[node name="Seperator3" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -75
+alignment = 1
+
+[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonExit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[node name="ButtonHowTo" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Howto"
+
+[node name="ButtonStart" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start"

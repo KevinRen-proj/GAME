@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://doso3a5p5upim"
+path="res://.godot/imported/DALL·E 2024-04-27 13.42.14 - A pixel art image depicting a broken GPU in retro 8-bit style, with a black background. The GPU should appear damaged with visible cracks and a few br.jpg-c9f5265a015a6c5272da588ab9c370db.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/DALL·E 2024-04-27 13.42.14 - A pixel art image depicting a broken GPU in retro 8-bit style, with a black background. The GPU should appear damaged with visible cracks and a few br.jpg"
+dest_files=["res://.godot/imported/DALL·E 2024-04-27 13.42.14 - A pixel art image depicting a broken GPU in retro 8-bit style, with a black background. The GPU should appear damaged with visible cracks and a few br.jpg-c9f5265a015a6c5272da588ab9c370db.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

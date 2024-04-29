@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://fs6tscjxqpyo"]
+
+[ext_resource type="Texture2D" uid="uid://dxawd0c0k6wfw" path="res://Assets/pixil-frame-0 (3).png" id="1_dyyrw"]
+[ext_resource type="Script" path="res://MainGame/tileGraphic/sprite_2d.gd" id="2_d48q6"]
+
+[node name="GraphicTile" type="Sprite2D" groups=["greenTile"]]
+position = Vector2(43.8417, -2.67304)
+scale = Vector2(1.96275, 1.33)
+texture = ExtResource("1_dyyrw")
+offset = Vector2(-3.55593, -0.621782)
+script = ExtResource("2_d48q6")

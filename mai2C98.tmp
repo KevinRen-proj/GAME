@@ -1,0 +1,124 @@
+[gd_scene load_steps=15 format=3 uid="uid://bqvvbn6n6kvr3"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_qvpgx"]
+[ext_resource type="Texture2D" uid="uid://dhq7kmnjfl2yk" path="res://DALL·E 2024-04-25 09.07.36 - A retro pixel art depicting the inside of a GPU, viewed from a top-down perspective. The image should be detailed and colorful, showing various compon.jpg" id="1_t36gb"]
+[ext_resource type="Texture2D" uid="uid://dsryhpngqg3dh" path="res://JUSTFAN-fotor-2024042419820.png" id="2_7scjf"]
+[ext_resource type="Script" path="res://RotateFan.gd" id="3_6dq61"]
+[ext_resource type="Texture2D" uid="uid://b15wpe0malyw2" path="res://JUSTFAN.jpg" id="4_4itd4"]
+[ext_resource type="Script" path="res://ProgressBar.gd" id="5_mly51"]
+[ext_resource type="Texture2D" uid="uid://cqmsrsusiq5u4" path="res://DALL·E 2024-04-25 12.13.02 - Create a retro 8-bit pixel art image depicting the view from a webcam focused on a gamer's face. The gamer is excited, with wide eyes and a big smile,.jpg" id="6_8pn40"]
+[ext_resource type="Texture2D" uid="uid://crc8vcebmnimr" path="res://DALL·E 2024-04-25 14.33.18 - Design a retro pixel art photo frame, ideal for digital display. The frame should be styled with a nostalgic, arcade game-inspired aesthetic, featurin.jpg" id="7_bwkip"]
+[ext_resource type="Texture2D" uid="uid://114amiaoxkxf" path="res://mathdisplay.jpg" id="8_ef1x5"]
+[ext_resource type="Script" path="res://MathInput.gd" id="10_ncq86"]
+[ext_resource type="FontFile" uid="uid://g8npey44c66j" path="res://pixeloid-font/PixeloidMono-d94EV.ttf" id="10_vrkkn"]
+[ext_resource type="Script" path="res://LabelMath.gd" id="11_638b4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0yjd"]
+bg_color = Color(0, 0.666454, 0.810955, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_size = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8eac"]
+bg_color = Color(0.779377, 0, 0.071297, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, -10)
+script = ExtResource("1_qvpgx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = 8.0
+offset_right = 1190.0
+offset_bottom = 958.0
+texture = ExtResource("1_t36gb")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1002, 727.898)
+scale = Vector2(0.289809, 0.285828)
+texture = ExtResource("4_4itd4")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 912.0
+offset_top = 845.0
+offset_right = 1095.0
+offset_bottom = 859.0
+theme_override_styles/background = SubResource("StyleBoxFlat_w0yjd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s8eac")
+max_value = 1.0
+show_percentage = false
+script = ExtResource("5_mly51")
+metadata/_edit_use_anchors_ = true
+
+[node name="RotateFan" type="Sprite2D" parent="."]
+position = Vector2(1002, 727.898)
+scale = Vector2(0.289809, 0.285828)
+texture = ExtResource("2_7scjf")
+script = ExtResource("3_6dq61")
+
+[node name="WebCam" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(963, 299)
+scale = Vector2(0.287109, 0.252197)
+texture = ExtResource("6_8pn40")
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(964.5, 310.5)
+scale = Vector2(0.37472, 0.326835)
+texture = ExtResource("7_bwkip")
+
+[node name="MathDisplay" type="Sprite2D" parent="."]
+position = Vector2(258.275, 819.968)
+scale = Vector2(0.906991, 0.323752)
+texture = ExtResource("8_ef1x5")
+
+[node name="LabelMath" type="Label" parent="."]
+offset_left = 120.0
+offset_top = 730.0
+offset_right = 398.0
+offset_bottom = 853.0
+theme_override_fonts/font = ExtResource("10_vrkkn")
+theme_override_font_sizes/font_size = 45
+text = "10+10"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_638b4")
+
+[node name="InputMath" type="TextEdit" parent="."]
+offset_left = 72.0
+offset_top = 825.0
+offset_right = 436.0
+offset_bottom = 873.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 21
+placeholder_text = " "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InputMath"]
+layout_mode = 0
+offset_right = 363.0
+offset_bottom = 40.0
+
+[node name="Caret" type="Label" parent="InputMath/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = " > "
+
+[node name="Input" type="LineEdit" parent="InputMath/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_vrkkn")
+max_length = 10
+script = ExtResource("10_ncq86")
+
+[connection signal="text_submitted" from="InputMath/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="InputMath/HBoxContainer/Input" to="InputMath/HBoxContainer/Input" method="_on_text_submitted"]

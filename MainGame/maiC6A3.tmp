@@ -1,0 +1,195 @@
+[gd_scene load_steps=21 format=3 uid="uid://bqvvbn6n6kvr3"]
+
+[ext_resource type="Script" path="res://MainGame/main.gd" id="1_u3mu8"]
+[ext_resource type="Texture2D" uid="uid://dhq7kmnjfl2yk" path="res://Assets/DALL·E 2024-04-25 09.07.36 - A retro pixel art depicting the inside of a GPU, viewed from a top-down perspective. The image should be detailed and colorful, showing various compon.jpg" id="2_srw5e"]
+[ext_resource type="Texture2D" uid="uid://b15wpe0malyw2" path="res://Assets/JUSTFAN.jpg" id="3_my4ws"]
+[ext_resource type="Script" path="res://MainGame/ProgressBar.gd" id="4_dh0iq"]
+[ext_resource type="Texture2D" uid="uid://dsryhpngqg3dh" path="res://Assets/JUSTFAN-fotor-2024042419820.png" id="5_l7j4p"]
+[ext_resource type="Script" path="res://MainGame/RotateFan.gd" id="6_tsmsk"]
+[ext_resource type="Texture2D" uid="uid://cqmsrsusiq5u4" path="res://Assets/DALL·E 2024-04-25 12.13.02 - Create a retro 8-bit pixel art image depicting the view from a webcam focused on a gamer's face. The gamer is excited, with wide eyes and a big smile,.jpg" id="7_ld12w"]
+[ext_resource type="Texture2D" uid="uid://crc8vcebmnimr" path="res://Assets/DALL·E 2024-04-25 14.33.18 - Design a retro pixel art photo frame, ideal for digital display. The frame should be styled with a nostalgic, arcade game-inspired aesthetic, featurin.jpg" id="8_ahs5o"]
+[ext_resource type="Texture2D" uid="uid://114amiaoxkxf" path="res://Assets/mathdisplay.jpg" id="9_mqokk"]
+[ext_resource type="FontFile" uid="uid://g8npey44c66j" path="res://pixeloid-font/PixeloidMono-d94EV.ttf" id="10_q76er"]
+[ext_resource type="Script" path="res://MainGame/LabelMath.gd" id="11_qmxcq"]
+[ext_resource type="Script" path="res://MainGame/MathInput.gd" id="12_yeh6a"]
+[ext_resource type="Texture2D" uid="uid://b4bnoiw6sq3ee" path="res://Assets/DALL·E 2024-04-26 14.02.05 - A 2D pixel art illustration of a retro computer screen, featuring vibrant colors typical of 80s technology. The screen should display a simple user in.jpg" id="13_2vkof"]
+[ext_resource type="Texture2D" uid="uid://nnss0r2pe2om" path="res://Assets/DALL·E 2024-04-26 13.47.17 - A 5 by 6 grid (5 columns and 6 rows) in pixel art retro style, with each cell distinctly bordered in black. No additional labels or characters. The de.jpg" id="13_lejxq"]
+[ext_resource type="PackedScene" uid="uid://fs6tscjxqpyo" path="res://MainGame/tileGraphic/sprite_2d.tscn" id="15_ab4o3"]
+[ext_resource type="Script" path="res://MainGame/GraphicBoard.gd" id="15_ugfxo"]
+[ext_resource type="Texture2D" uid="uid://bon7qx5qxatcw" path="res://Assets/DALL·E 2024-04-26 18.36.57 - A 2D retro pixel art style computer monitor screen with the screen turned off, appearing completely black. The monitor retains its chunky, bulky desig.jpg" id="18_bbnkv"]
+[ext_resource type="Script" path="res://MainGame/LabelGraphic.gd" id="18_gc0mg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0yjd"]
+bg_color = Color(0, 0.666454, 0.810955, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_size = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8eac"]
+bg_color = Color(0.779377, 0, 0.071297, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, -10)
+script = ExtResource("1_u3mu8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = 8.0
+offset_right = 1190.0
+offset_bottom = 958.0
+texture = ExtResource("2_srw5e")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1002, 727.898)
+scale = Vector2(0.289809, 0.285828)
+texture = ExtResource("3_my4ws")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 912.0
+offset_top = 845.0
+offset_right = 1095.0
+offset_bottom = 859.0
+theme_override_styles/background = SubResource("StyleBoxFlat_w0yjd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s8eac")
+max_value = 1.0
+show_percentage = false
+script = ExtResource("4_dh0iq")
+metadata/_edit_use_anchors_ = true
+
+[node name="RotateFan" type="Sprite2D" parent="."]
+position = Vector2(1002, 727.898)
+scale = Vector2(0.289809, 0.285828)
+texture = ExtResource("5_l7j4p")
+script = ExtResource("6_tsmsk")
+
+[node name="WebCam" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(963, 299)
+scale = Vector2(0.287109, 0.252197)
+texture = ExtResource("7_ld12w")
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(964.5, 310.5)
+scale = Vector2(0.37472, 0.326835)
+texture = ExtResource("8_ahs5o")
+
+[node name="MathDisplay" type="Sprite2D" parent="."]
+position = Vector2(258.275, 819.968)
+scale = Vector2(0.906991, 0.323752)
+texture = ExtResource("9_mqokk")
+
+[node name="LabelMath" type="Label" parent="."]
+offset_left = 120.0
+offset_top = 730.0
+offset_right = 398.0
+offset_bottom = 853.0
+theme_override_fonts/font = ExtResource("10_q76er")
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_qmxcq")
+
+[node name="InputMath" type="TextEdit" parent="."]
+offset_left = 72.0
+offset_top = 825.0
+offset_right = 436.0
+offset_bottom = 873.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 21
+placeholder_text = " "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InputMath"]
+layout_mode = 0
+offset_right = 363.0
+offset_bottom = 40.0
+
+[node name="Caret" type="Label" parent="InputMath/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = " > "
+
+[node name="Input" type="LineEdit" parent="InputMath/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_q76er")
+max_length = 10
+script = ExtResource("12_yeh6a")
+
+[node name="GraphicBoarder" type="Sprite2D" parent="."]
+position = Vector2(215, 294.875)
+scale = Vector2(0.645485, 0.953011)
+texture = ExtResource("13_2vkof")
+
+[node name="GraphicBoard" type="Sprite2D" parent="."]
+position = Vector2(45, 56)
+scale = Vector2(0.438864, 0.602415)
+texture = ExtResource("13_lejxq")
+offset = Vector2(382.807, 391.756)
+script = ExtResource("15_ugfxo")
+greenTile = ExtResource("15_ab4o3")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 29.0
+offset_top = 62.0
+offset_right = 46.0
+offset_bottom = 527.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_q76er")
+text = "
+A
+
+
+
+
+B
+
+
+
+C
+
+
+
+D
+
+
+
+E"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 34.0
+offset_right = 380.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_q76er")
+text = "   1     2     3     4     5"
+
+[node name="DisplayGraphics" type="Sprite2D" parent="."]
+position = Vector2(489.5, 97.0625)
+scale = Vector2(0.234628, 0.257597)
+texture = ExtResource("18_bbnkv")
+
+[node name="Label" type="Label" parent="DisplayGraphics"]
+offset_left = -230.0
+offset_top = -188.0
+offset_right = 254.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("10_q76er")
+theme_override_font_sizes/font_size = 181
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_gc0mg")
+
+[connection signal="text_submitted" from="InputMath/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="InputMath/HBoxContainer/Input" to="LabelMath" method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="InputMath/HBoxContainer/Input" to="InputMath/HBoxContainer/Input" method="_on_text_submitted"]
